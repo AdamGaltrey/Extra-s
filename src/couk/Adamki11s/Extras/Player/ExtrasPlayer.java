@@ -80,6 +80,11 @@ public class ExtrasPlayer extends PlayerMethods {
 		return ((CraftPlayer)p).getHandle().dimension;
 	}
 
+	@Override
+	public void removeBlockOnPlayerHead(Player p) {
+		p.getInventory().setHelmet(null);
+	}
+
 
 
 }

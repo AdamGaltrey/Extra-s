@@ -61,5 +61,7 @@ public abstract class PlayerMethods {
 	public abstract void forceChat(Player p, String message);
 	
 	public abstract int getDimension(Player p);	
+	
+	public abstract void removeBlockOnPlayerHead(Player p);
 
 }

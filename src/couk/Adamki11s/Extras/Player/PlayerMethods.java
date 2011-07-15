@@ -2,7 +2,9 @@ package couk.Adamki11s.Extras.Player;
 
 import java.util.UUID;
 
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
@@ -50,18 +52,66 @@ public abstract class PlayerMethods {
 	 */
 	public abstract void setBlockOnPlayerHead(Player p, int id);
 	
+	/**
+	 * Gets the time (In seconds) that the player has lived for.
+	 * @param p The player to check.
+	 * @return Integer value representing seconds.
+	 */
 	public abstract int getSecondsLived(Player p);
 	
+	/**
+	 * Gets the time (In Minutes) that the player has lived for.
+	 * @param p The player to check.
+	 * @return Integer value representing seconds.
+	 */
 	public abstract int getMinutesLived(Player p);
 	
+	/**
+	 * Gets the time (In Hours) that the player has lived for.
+	 * @param p The player to check.
+	 * @return Integer value representing hours.
+	 */
 	public abstract int getHoursLived(Player p);
 	
+	/**
+	 * Gets the players unique Id.
+	 * @param p The player to get.
+	 * @return The players UUID.
+	 */
 	public abstract UUID getUniqueUUID(Player p);
 	
+	/**
+	 * Force the player to send a chat message.
+	 * @param p The player to force.
+	 * @param message The message to send.
+	 */
 	public abstract void forceChat(Player p, String message);
 	
+	/**
+	 * Get the dimension the player is in.
+	 * @param p The player to check.
+	 * @return The players dimension.
+	 */
 	public abstract int getDimension(Player p);	
 	
+	/**
+	 * Remove anything on the player's head.
+	 * @param p The player.
+	 */
 	public abstract void removeBlockOnPlayerHead(Player p);
+	
+	/**
+	 * Get the block the player is looking at regardless of distance.
+	 * @param p The player.
+	 * @return The block the player is looking at.
+	 */
+	public abstract Block getLookedAtBlock(Player p);
+	
+	/**
+	 * Get the location of the block the player is looking at.
+	 * @param p The player.
+	 * @return The location of the block the player is looking at.
+	 */
+	public abstract Location getLocationLooked(Player p);
 
 }

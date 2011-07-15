@@ -1,9 +1,11 @@
 package couk.Adamki11s.Extras.Player;
 
+import java.util.List;
 import java.util.UUID;
 import org.bukkit.Material;
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.block.Block;
 import org.bukkit.craftbukkit.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -83,6 +85,20 @@ public class ExtrasPlayer extends PlayerMethods {
 	@Override
 	public void removeBlockOnPlayerHead(Player p) {
 		p.getInventory().setHelmet(null);
+	}
+
+	@Override
+	public Block getLookedAtBlock(Player p) {
+		List<Block> blocks = p.getLineOfSight(null, 500);
+		Block lookedAt = blocks.get(blocks.size() - 1);
+		return lookedAt;
+	}
+	
+	@Override
+	public Location getLocationLooked(Player p) {
+		List<Block> blocks = p.getLineOfSight(null, 500);
+		Block lookedAt = blocks.get(blocks.size() - 1);
+		return lookedAt.getLocation();
 	}
 
 

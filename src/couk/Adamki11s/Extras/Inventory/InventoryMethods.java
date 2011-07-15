@@ -132,5 +132,6 @@ public abstract class InventoryMethods {
 	 * @return An ItemStack[] array containing the contents of the saved inventory.
 	 */
 	public abstract ItemStack[] retrieveInventory(Player p);
-
+	
+	public abstract void updateInventory(Player p);
 }

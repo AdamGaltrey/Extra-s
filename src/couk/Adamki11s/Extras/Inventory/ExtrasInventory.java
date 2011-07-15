@@ -2,7 +2,10 @@ package couk.Adamki11s.Extras.Inventory;
 
 import java.util.HashMap;
 
+import net.minecraft.server.Container;
+
 import org.bukkit.Material;
+import org.bukkit.craftbukkit.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -179,6 +182,11 @@ public class ExtrasInventory extends InventoryMethods {
 		} else {
 			return null;
 		}
+	}
+
+	@Override
+	public void updateInventory(Player p) {
+		((CraftPlayer)p).getHandle().syncInventory();
 	}
 
 }

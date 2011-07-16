@@ -82,7 +82,7 @@ public class ExtrasCryptography extends CryptographyMethods {
 	   	     	if(hex.length()==1) hexString.append('0');
 	   	     	hexString.append(hex);
 	    	}
-			return password;
+			return hexString.toString();
 		} catch (NoSuchAlgorithmException ex){
 			ex.printStackTrace();
 		}
@@ -109,7 +109,7 @@ public class ExtrasCryptography extends CryptographyMethods {
 	   	     	if(hex.length()==1) hexString.append('0');
 	   	     	hexString.append(hex);
 	    	}
-			return password;
+			return hexString.toString();
 		} catch (NoSuchAlgorithmException ex){
 			ex.printStackTrace();
 		}
@@ -136,7 +136,7 @@ public class ExtrasCryptography extends CryptographyMethods {
 	   	     	if(hex.length()==1) hexString.append('0');
 	   	     	hexString.append(hex);
 	    	}
-			return password;
+			return hexString.toString();
 		} catch (NoSuchAlgorithmException ex){
 			ex.printStackTrace();
 		}
